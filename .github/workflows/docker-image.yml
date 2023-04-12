@@ -34,7 +34,7 @@ jobs:
       run: echo "ID=$(date +%s)" >> $GITHUB_ENV
     
     - name: Build the Docker image
-      run: docker build ./multiply --tag public.ecr.aws/z8c2k6d0/diff:0.1.0-image-$ID
+      run: docker build ./multiply --tag public.ecr.aws/z8c2k6d0/multiply:0.1.0-image-$ID
     
     - name: Push the Docker image
-      run: docker push public.ecr.aws/z8c2k6d0/diff:0.1.0-image-$ID
+      run: docker push public.ecr.aws/z8c2k6d0/multiply:0.1.0-image-$ID
